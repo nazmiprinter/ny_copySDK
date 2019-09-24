@@ -1,0 +1,7 @@
+# ny_copySDK
+Maya script to copy/paste set driven keys
+
+Copy and paste "ny_copySDK.py" and "ny_copySDK.ui" files to your "maya/20**/scripts" folder and
+run this line on a python tab: import ny_copySDK;reload(ny_copySDK)
+
+-UI made with QtDesigner/PySide2 so it'll run with Maya 2017 and newer versions.
