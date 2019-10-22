@@ -13,9 +13,10 @@ import maya.OpenMayaUI as omui
 from shiboken2 import wrapInstance
 
 #AUTHOR = Nazmi Yazici
+#EMAIL = nazmiprinter@gmail.com
 #WEBSITE = vimeo.com/nazmiprinter
 #DATE = 29/08/2019
-#EMAIL = nazmiprinter@gmail.com
+
 
 def loadUiType(uiFile):
     parsed = xml.parse(uiFile)
