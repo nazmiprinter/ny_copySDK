@@ -18,10 +18,11 @@ from shiboken2 import wrapInstance
 #DATE = 29/08/2019
 
 
-def loadUiType(uiFile):
+def load_ui_type(uiFile):
     parsed = xml.parse(uiFile)
     widget_class = parsed.find('widget').get('class')
     form_class = parsed.find('class').text
+
     with open(uiFile, 'r') as f:
         o = StringIO()
         frame = {}
@@ -35,10 +36,8 @@ def loadUiType(uiFile):
         base_class = getattr(QtWidgets, widget_class)
     return form_class, base_class
 
-usrProfile = mel.eval('getenv("USERPROFILE")')
-mayaVersion = cmds.about(version=True)
-uiFile = (usrProfile+'/Documents/maya/'+mayaVersion+'/scripts/ny_copySDK.ui')
-form_class, base_class = loadUiType(uiFile)
+uiFile = '{}/ny_copySDK.ui'.format(os.path.dirname(__file__))
+form_class, base_class = load_ui_type(uiFile)
 
 def maya_main_window():
     main_window_ptr = omui.MQtUtil.mainWindow()
