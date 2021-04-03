@@ -14,7 +14,7 @@ from shiboken2 import wrapInstance
 
 #AUTHOR = Nazmi Yazici
 #EMAIL = nazmiprinter@gmail.com
-#WEBSITE = vimeo.com/nazmiprinter
+#WEBSITE = nazmiprinter.com
 #DATE = 29/08/2019
 
 
